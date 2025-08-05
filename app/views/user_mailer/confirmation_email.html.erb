@@ -1,0 +1,26 @@
+<div class="header">
+  <h1>Welcome to Accountable To!</h1>
+</div>
+
+<div class="content">
+  <p>Hi there!</p>
+
+  <p>Thank you for signing up for Accountable To. We're excited to help you stay accountable to your goals!</p>
+
+  <p>To get started, please confirm your email address by clicking the button below:</p>
+
+  <p class="container-center">
+    <%= link_to "Confirm My Email", @confirmation_url, class: "button" %>
+  </p>
+
+  <p><strong>Important:</strong> This confirmation link will expire in 1 hour for security reasons.</p>
+
+  <p>After confirming your email, you'll be able to set up your first goal and choose how often you'd like us to check in with you.</p>
+
+  <p>If you didn't sign up for this account, you can safely ignore this email.</p>
+
+  <p>Best regards,<br>The Accountable To Team</p>
+
+  <p>If the button above doesn't work, copy and paste this link into your browser:</p>
+  <p><%= @confirmation_url %></p>
+</div>

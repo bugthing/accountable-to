@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+require_relative "../config/environment"
+
+require "telegram/bot"
+bot = Telegram::Bot::Client.new(Rails.application.credentials.telegram_api_key)
+puts "Starting Telegram Bot Client: #{bot}..."
+handler = TelegramMessageHandler.new(bot)
+
+Signal.trap("INT") do
+  puts "Stopping Telegram Bot Client: #{bot}..."
+  bot.stop
+end
+
+bot.listen { handler.handle(it) }

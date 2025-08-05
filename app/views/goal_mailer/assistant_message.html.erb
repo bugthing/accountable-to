@@ -1,0 +1,15 @@
+<div class="header">
+  <h1>Message from Your Goal Assistant</h1>
+</div>
+
+<div class="content">
+  <p>Hi there!</p>
+
+  <p>Your assistant has a message regarding your goal: <strong><%= @goal.title %></strong></p>
+
+  <div class="goal-description">
+    <p><%= simple_format(@goal.most_recent_assistant_message&.content) %></p>
+  </div>
+
+  <p>You can reply directly to this email to continue the conversation with your goal assistant.</p>
+</div>

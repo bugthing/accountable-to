@@ -1,0 +1,66 @@
+<% content_for :title, "Your Goals Dashboard" %>
+
+<div class="dashboard-container">
+  <div class="dashboard-header">
+    <div class="container">
+      <div class="header-content">
+        <h1>Your Goals Dashboard</h1>
+        <p>Welcome back! Here's your accountability overview.</p>
+      </div>
+      <div class="header-actions">
+        <% unless current_user.at_goal_limit? %>
+          <%= link_to "Add New Goal", new_goal_path, class: "btn-primary" %>
+        <% else %>
+          <span class="goal-limit-message">Goal limit reached (2/2)</span>
+        <% end %>
+        <%= button_to "Logout", logout_path, method: :delete, class: "btn-secondary" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="dashboard-content">
+
+    <% if @goals.any? %>
+      <div class="goals-grid">
+        <% @goals.each do |goal| %>
+          <div class="goal-card">
+            <div class="goal-header">
+              <h3><%= goal.title.present? ? goal.title : truncate(goal.description, length: 60) %></h3>
+              <span class="frequency-badge frequency-<%= goal.frequency %>">
+                <%= goal.frequency_description %>
+              </span>
+            </div>
+            <p class="goal-description"><%= truncate(goal.description, length: 120) %></p>
+
+
+            <div class="goal-footer">
+              <span class="goal-date">Created <%= time_ago_in_words(goal.created_at) %> ago</span>
+              <%= link_to "View Details", goal, class: "btn-outline" %>
+
+              <% if goal.telegram_chat_id.blank? && goal.telegram_token %>
+                <%= link_to("https://t.me/AccountableToBot?start=#{goal.telegram_token}", class: "btn-outline") do %>
+                  <%= image_tag "telegram_icon.png", height: "32", width: "32"  %>
+                <% end %>
+              <% end %>
+
+              <% if goal.email_token %>
+                <%= link_to("📧", "mailto:#{goal.reply_email_address}", class: "btn-outline") %>
+              <% end %>
+
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% else %>
+      <div class="empty-state">
+        <div class="empty-icon">🎯</div>
+        <h2>No Goals Yet</h2>
+        <p>Start your accountability journey by creating your first goal!</p>
+        <% unless current_user.at_goal_limit? %>
+          <%= link_to "Create Your First Goal", new_goal_path, class: "btn-primary" %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
+

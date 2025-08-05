@@ -1,0 +1,6 @@
+production:
+  periodic_checkin_enqueue:
+    class: CheckGoalsDueJob
+    queue: background
+    args: []
+    schedule: every hour

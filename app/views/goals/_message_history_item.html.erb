@@ -1,0 +1,7 @@
+<div class="message message-<%= message.role %>">
+  <div class="message-header">
+    <span class="message-role"><%= message.role.capitalize %></span>
+    <span class="message-time"><%= time_ago_in_words(message.created_at) %> ago</span>
+  </div>
+  <div class="message-content"><%= simple_format(message.content) %></div>
+</div>

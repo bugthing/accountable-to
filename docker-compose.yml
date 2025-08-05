@@ -1,0 +1,17 @@
+services:
+  app:
+    image: "${APP_IMAGE:-accountable-to}"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    command: rails s
+    depends_on:
+      - chrome-server
+
+  chrome-server:
+    image: selenium/standalone-chrome:latest
+    ports:
+      - "7900:7900"
+    shm_size: 2g

@@ -1,0 +1,19 @@
+<div class="header">
+  <h1>Accountable To</h1>
+  <h2>Your Secure Login Link</h2>
+</div>
+
+<div class="content">
+  <p>Hello!</p>
+
+  <p>You requested a magic link to log into your Accountable To account. Click the button below to securely log in:</p>
+
+  <p class="container-center">
+    <%= link_to "Log In to Your Dashboard", @magic_login_url, class: "button" %>
+  </p>
+
+  <p>This link will expire in 1 hour for your security.</p>
+
+  <p><strong>Security Note:</strong> If you didn't request this login link, please ignore this email. Your account remains secure.</p>
+</div>
+

@@ -1,0 +1,61 @@
+variant: fcos
+version: 1.6.0
+passwd:
+  users:
+    - name: core
+      ssh_authorized_keys_local:
+        - /tmp/ssh/bugthing.pub
+      groups: [ sudo, docker ]
+storage:
+  files:
+    - path: /etc/sysctl.d/20-silence-audit.conf
+      mode: 0644
+      contents:
+        inline: |
+          # change console message logging level from DEBUG (7) to WARNING (4)
+          kernel.printk=4
+    - path: /etc/hostname
+      mode: 0644
+      overwrite: true
+      contents:
+        inline: |
+          kamal-vps
+    - path: /etc/sysctl.d/90-unprivileged_port_start.conf
+      contents:
+        inline: |
+          net.ipv4.ip_unprivileged_port_start = 80
+
+systemd:
+  units:
+    - name: rpm-ostree-install.service
+      enabled: true
+      contents: |
+        [Unit]
+        Description=Layer in packages via rpm-ostree
+        Wants=network-online.target
+        After=network-online.target
+        Before=zincati.service
+        ConditionPathExists=!/var/lib/%N.stamp
+
+        [Service]
+        Type=oneshot
+        RemainAfterExit=yes
+        ExecStart=/usr/bin/rpm-ostree install --apply-live --allow-inactive neovim tmux sshguard
+        ExecStart=/bin/touch /var/lib/%N.stamp
+
+        [Install]
+        WantedBy=multi-user.target
+    - name: sshguard.service
+      enabled: true
+      contents: |
+        [Unit]
+        Description=SSHGuard - blocks brute-force login attempts
+        After=network-online.target iptables-restore.service
+
+        [Service]
+        ExecStart=sshguard
+        Restart=always
+
+        [Install]
+        WantedBy=multi-user.target
+

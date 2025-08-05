@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  goal: two
+  role: user
+  content: Please help with my goal
+
+two:
+  goal: two
+  role: assistant
+  content: Just attain goal, simple!

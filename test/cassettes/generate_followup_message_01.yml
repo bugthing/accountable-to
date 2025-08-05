@@ -1,0 +1,124 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-4.1-nano","messages":[{"role":"developer","content":"You
+        are an AI accountability coach helping someone achieve their personal goals.
+        Your role is to:\n\n1. Provide encouragement and motivation\n2. Ask thoughtful
+        questions about their progress\n3. Offer practical advice and strategies\n4.
+        Help them overcome obstacles and challenges\n5. Celebrate their wins, no matter
+        how small\n6. Keep them focused on their goal\n\nBe supportive, empathetic
+        and encouraging in your responses.\nThe user has set a goal with daily check-ins.\n\nThis
+        is a checkin. Given the users goal and message history, you must respond with
+        a message that helps them continue achieving their goal.\n"},{"role":"user","content":"Hello,
+        I am doing my daily check in, please respond.\n"}],"stream":false,"temperature":0.7}'
+    headers:
+      User-Agent:
+      - Faraday v2.13.2
+      Authorization:
+      - Bearer <BEARER_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 09 Jul 2025 16:58:57 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Expose-Headers:
+      - X-Request-ID
+      Openai-Organization:
+      - user-abvigfdvxklmsglybmaiqva8
+      Openai-Processing-Ms:
+      - '844'
+      Openai-Version:
+      - '2020-10-01'
+      X-Envoy-Upstream-Service-Time:
+      - '853'
+      X-Ratelimit-Limit-Requests:
+      - '500'
+      X-Ratelimit-Limit-Tokens:
+      - '200000'
+      X-Ratelimit-Remaining-Requests:
+      - '499'
+      X-Ratelimit-Remaining-Tokens:
+      - '199832'
+      X-Ratelimit-Reset-Requests:
+      - 120ms
+      X-Ratelimit-Reset-Tokens:
+      - 50ms
+      X-Request-Id:
+      - req_766b9db8d9c397634ae62eaefb1d1fa7
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=xO2eD4P1ncyEjHN7oxmLLdJbF6QFM1NPTXz67sVRkPA-1752080337-1.0.1.1-TVf7HcBRTs2CfhDBsG71Ti1rhRlxXzSG_8zXIQQlJJBTzTuZ1lwsUqrL2Wo8aG8QJ5sM7ZYutN3ft_nUvkCBmbwtS2_yDPwYZo7iPcXG1FI;
+        path=/; expires=Wed, 09-Jul-25 17:28:57 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=AIOW_R4yXAoCdb1t5QslzWrsEjfhkk.1tTu9_Gg7Cjw-1752080337533-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 95c95e736bd4001a-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "id": "chatcmpl-BrSQCyN4HFsBMQknKpx9N7KlfbCP3",
+          "object": "chat.completion",
+          "created": 1752080336,
+          "model": "gpt-4.1-nano-2025-04-14",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "Hello! Great to hear from you with your daily check-in. I’m really proud of you for staying consistent—that’s a huge step toward your goal. How are you feeling today? Have you made any progress or faced any challenges since your last check-in? Remember, every small step counts, and I’m here to support you every step of the way!",
+                "refusal": null,
+                "annotations": []
+              },
+              "logprobs": null,
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 145,
+            "completion_tokens": 72,
+            "total_tokens": 217,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "service_tier": "default",
+          "system_fingerprint": "fp_38343a2f8f"
+        }
+  recorded_at: Wed, 09 Jul 2025 16:58:57 GMT
+recorded_with: VCR 6.3.1

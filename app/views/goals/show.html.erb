@@ -1,0 +1,63 @@
+<% content_for :title, @goal.title.present? ? @goal.title : "Your Goal" %>
+
+<div class="goal-detail-container">
+  <div class="goal-detail-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="breadcrumb">
+          <%= link_to "← Back to Dashboard", dashboard_path, class: "back-link" %>
+        </div>
+        <h1><%= @goal.title.present? ? @goal.title : "Your Goal" %></h1>
+        <span class="frequency-badge frequency-<%= @goal.frequency %>">
+          <%= @goal.frequency_description %>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="goal-detail-content">
+    <div class="container">
+      <div class="goal-info">
+        <div class="info-section">
+          <h2>Goal Description</h2>
+          <p><%= simple_format(@goal.description) %></p>
+        </div>
+
+        <div class="info-section">
+          <h2>Accountability Schedule</h2>
+          <div class="schedule-info">
+            <div class="schedule-item">
+              <span class="label">Frequency:</span>
+              <span class="value"><%= @goal.frequency_description %></span>
+            </div>
+            <div class="schedule-item">
+              <span class="label">Goal Created:</span>
+              <span class="value"><%= @goal.created_at.strftime("%B %d, %Y") %></span>
+            </div>
+          </div>
+
+          <%= render("goals/message_history", goal: @goal) %>
+
+        </div>
+
+        <div class="info-section">
+          <h2>What's Next?</h2>
+          <div class="next-steps">
+            <p>Your goal is now active! Based on your chosen frequency (<strong><%= @goal.frequency %></strong>), we'll send you check-in emails to help you stay accountable.</p>
+            <ul>
+              <li>You'll receive your first check-in within the next <%= @goal.frequency == 'daily' ? '24 hours' : @goal.frequency == 'weekly' ? 'week' : 'month' %></li>
+              <li>Each check-in will include personalized questions about your progress</li>
+              <li>You can update or modify your goal anytime from your dashboard</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="action-buttons">
+        <%= link_to "Back to Dashboard", dashboard_path, class: "btn-primary" %>
+        <%= button_to("Delete this Goal", goal_path(@goal), method: :delete, form: {data: {turbo_confirm: "Are you sure?"}}, class: "btn-danger") %>
+        <%= link_to "Create Another Goal", new_goal_path, class: "btn-outline" %>
+      </div>
+    </div>
+  </div>
+</div>

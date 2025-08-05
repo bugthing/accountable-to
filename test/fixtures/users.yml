@@ -1,0 +1,16 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: user1@example.com
+  confirmation_token: abc123token
+  confirmed_at: 2025-06-24 13:12:56
+  confirmation_token_generated_at: 2025-06-24 12:12:56
+
+two:
+  email: user2@example.com
+  confirmation_token: def456token
+  confirmed_at: 2025-06-24 13:12:56
+  confirmation_token_generated_at: 2025-06-24 12:12:56
+
+three:
+  email: user3@example.com

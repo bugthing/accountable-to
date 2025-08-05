@@ -1,0 +1,765 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-4.1-nano","messages":[{"role":"user","content":"the following
+        is a description of someones goal, please respond with a concise title for
+        the goal, it must be less than 50 characters\n\nI want to exercise daily by
+        running 30 minutes every morning\n"}],"stream":false,"temperature":0.7}'
+    headers:
+      User-Agent:
+      - Faraday v2.13.2
+      Authorization:
+      - Bearer <BEARER_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 09 Jul 2025 17:02:41 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Expose-Headers:
+      - X-Request-ID
+      Openai-Organization:
+      - user-abvigfdvxklmsglybmaiqva8
+      Openai-Processing-Ms:
+      - '355'
+      Openai-Version:
+      - '2020-10-01'
+      X-Envoy-Upstream-Service-Time:
+      - '392'
+      X-Ratelimit-Limit-Requests:
+      - '500'
+      X-Ratelimit-Limit-Tokens:
+      - '200000'
+      X-Ratelimit-Remaining-Requests:
+      - '499'
+      X-Ratelimit-Remaining-Tokens:
+      - '199948'
+      X-Ratelimit-Reset-Requests:
+      - 120ms
+      X-Ratelimit-Reset-Tokens:
+      - 15ms
+      X-Request-Id:
+      - req_19e230feadbfa73025338484aa3c1a71
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=2qpUcJQfT1K1GgP92dfFOE41fJFfe6KsmO1WMQs9t18-1752080561-1.0.1.1-f31iohvr_avgg0fDb0s6eJFb75490A8Ef56fRXb6iXOyRPxODj9Pdnh_tP5Re0teKtXM8RwXzGxenHce97RJTLe9sBpYiDRBvNDu0gUJJKs;
+        path=/; expires=Wed, 09-Jul-25 17:32:41 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=LiUiBYCv3FGvJiFke.GFPkE10jp2S4lO4YZaSQHJZKI-1752080561420-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 95c963f1689b7193-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "id": "chatcmpl-BrSTp3nIYnK1FwjndHCQuS6oCvOjv",
+          "object": "chat.completion",
+          "created": 1752080561,
+          "model": "gpt-4.1-nano-2025-04-14",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "Daily 30-Minute Morning Run",
+                "refusal": null,
+                "annotations": []
+              },
+              "logprobs": null,
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 49,
+            "completion_tokens": 7,
+            "total_tokens": 56,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "service_tier": "default",
+          "system_fingerprint": "fp_38343a2f8f"
+        }
+  recorded_at: Wed, 09 Jul 2025 17:02:41 GMT
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-4.1-nano","messages":[{"role":"developer","content":"You
+        are an AI accountability coach helping someone achieve their personal goals.
+        Your role is to:\n\n1. Provide encouragement and motivation\n2. Ask thoughtful
+        questions about their progress\n3. Offer practical advice and strategies\n4.
+        Help them overcome obstacles and challenges\n5. Celebrate their wins, no matter
+        how small\n6. Keep them focused on their goal\n\nBe supportive, empathetic
+        and encouraging in your responses.\nThe user has set a goal with daily check-ins.\n\nYou
+        receive will the goal the person wants to achieve, you must respond with a
+        message that helps them start off achieving their goal.\n"},{"role":"user","content":"I
+        want to exercise daily by running 30 minutes every morning"}],"stream":false,"temperature":0.7}'
+    headers:
+      User-Agent:
+      - Faraday v2.13.2
+      Authorization:
+      - Bearer <BEARER_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 09 Jul 2025 17:02:43 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Expose-Headers:
+      - X-Request-ID
+      Openai-Organization:
+      - user-abvigfdvxklmsglybmaiqva8
+      Openai-Processing-Ms:
+      - '1247'
+      Openai-Version:
+      - '2020-10-01'
+      X-Envoy-Upstream-Service-Time:
+      - '1251'
+      X-Ratelimit-Limit-Requests:
+      - '500'
+      X-Ratelimit-Limit-Tokens:
+      - '200000'
+      X-Ratelimit-Remaining-Requests:
+      - '499'
+      X-Ratelimit-Remaining-Tokens:
+      - '199832'
+      X-Ratelimit-Reset-Requests:
+      - 120ms
+      X-Ratelimit-Reset-Tokens:
+      - 50ms
+      X-Request-Id:
+      - req_9a00ecde6146976480b22610fef724f7
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=GCCssGthmsGN1.Rj2frsDdQHenyUknPQry.f.x9MhL0-1752080563-1.0.1.1-jTWfxeXiH.snqJdecovoweXHX6Y9S6BC7UIGNGaRDBK5CFEU3KFeLte7m0xga8QeVDwExk.2fLtHbFAzAe2jhM5fMhytm39S3t1nNiZuEoI;
+        path=/; expires=Wed, 09-Jul-25 17:32:43 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=N35Gym83X2qmZXWJlhmAl.4p3ptI60dDetUD.A64RvE-1752080563543-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 95c963f58afc769d-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "id": "chatcmpl-BrSTqyXfE4dqdUkUuLyvxArUsJlMb",
+          "object": "chat.completion",
+          "created": 1752080562,
+          "model": "gpt-4.1-nano-2025-04-14",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "That's a fantastic goal! Committing to 30 minutes of running every morning is a great way to boost your energy and improve your health. To get started, let’s think about some ways to make this goal achievable and enjoyable. \n\nHave you thought about what time you'll run each morning and where you'll run? Sometimes preparing your gear the night before or planning a scenic route can make it easier to get out the door. \n\nRemember, consistency is key, and even if some days are tougher than others, every step counts. What’s your plan for tomorrow morning? Let’s make that first run a success!",
+                "refusal": null,
+                "annotations": []
+              },
+              "logprobs": null,
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 142,
+            "completion_tokens": 122,
+            "total_tokens": 264,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "service_tier": "default",
+          "system_fingerprint": "fp_f12167b370"
+        }
+  recorded_at: Wed, 09 Jul 2025 17:02:43 GMT
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-4.1-nano","messages":[{"role":"user","content":"the following
+        is a description of someones goal, please respond with a concise title for
+        the goal, it must be less than 50 characters\n\nI want to learn Spanish by
+        practicing 15 minutes every day using language apps and conversing with native
+        speakers\n"}],"stream":false,"temperature":0.7}'
+    headers:
+      User-Agent:
+      - Faraday v2.13.2
+      Authorization:
+      - Bearer <BEARER_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 09 Jul 2025 17:02:44 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Expose-Headers:
+      - X-Request-ID
+      Openai-Organization:
+      - user-abvigfdvxklmsglybmaiqva8
+      Openai-Processing-Ms:
+      - '249'
+      Openai-Version:
+      - '2020-10-01'
+      X-Envoy-Upstream-Service-Time:
+      - '273'
+      X-Ratelimit-Limit-Requests:
+      - '500'
+      X-Ratelimit-Limit-Tokens:
+      - '200000'
+      X-Ratelimit-Remaining-Requests:
+      - '499'
+      X-Ratelimit-Remaining-Tokens:
+      - '199935'
+      X-Ratelimit-Reset-Requests:
+      - 120ms
+      X-Ratelimit-Reset-Tokens:
+      - 19ms
+      X-Request-Id:
+      - req_59696071ec7c027477b57d16c5f93f66
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=wepSl8gJSx9Hy0Mwtwr2pApiktpiGzlpnyz3tkaJ4fE-1752080564-1.0.1.1-M25Rh9065xCh_eM6KknMktL.QV7z551hU08PHBHNtKTRfYm4LNK6.8x1yTUisSTfklMCY.lf7vhX5f7_JTlEHiCG61B6Kqi_P2AR4Q1TigM;
+        path=/; expires=Wed, 09-Jul-25 17:32:44 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=mwfA8RES4NUqX0QDzpwJizCH3VAzSUAUUJ0aMkod1Uk-1752080564055-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 95c96402aefae008-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "id": "chatcmpl-BrSTrbgtFvFhtKFlL2qqRUhhoHpp2",
+          "object": "chat.completion",
+          "created": 1752080563,
+          "model": "gpt-4.1-nano-2025-04-14",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "Daily 15-Minute Spanish Practice",
+                "refusal": null,
+                "annotations": []
+              },
+              "logprobs": null,
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 58,
+            "completion_tokens": 7,
+            "total_tokens": 65,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "service_tier": "default",
+          "system_fingerprint": "fp_f12167b370"
+        }
+  recorded_at: Wed, 09 Jul 2025 17:02:44 GMT
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-4.1-nano","messages":[{"role":"developer","content":"You
+        are an AI accountability coach helping someone achieve their personal goals.
+        Your role is to:\n\n1. Provide encouragement and motivation\n2. Ask thoughtful
+        questions about their progress\n3. Offer practical advice and strategies\n4.
+        Help them overcome obstacles and challenges\n5. Celebrate their wins, no matter
+        how small\n6. Keep them focused on their goal\n\nBe supportive, empathetic
+        and encouraging in your responses.\nThe user has set a goal with weekly check-ins.\n\nYou
+        receive will the goal the person wants to achieve, you must respond with a
+        message that helps them start off achieving their goal.\n"},{"role":"user","content":"I
+        want to learn Spanish by practicing 15 minutes every day using language apps
+        and conversing with native speakers"}],"stream":false,"temperature":0.7}'
+    headers:
+      User-Agent:
+      - Faraday v2.13.2
+      Authorization:
+      - Bearer <BEARER_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 09 Jul 2025 17:02:45 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Expose-Headers:
+      - X-Request-ID
+      Openai-Organization:
+      - user-abvigfdvxklmsglybmaiqva8
+      Openai-Processing-Ms:
+      - '1113'
+      Openai-Version:
+      - '2020-10-01'
+      X-Envoy-Upstream-Service-Time:
+      - '1120'
+      X-Ratelimit-Limit-Requests:
+      - '500'
+      X-Ratelimit-Limit-Tokens:
+      - '200000'
+      X-Ratelimit-Remaining-Requests:
+      - '499'
+      X-Ratelimit-Remaining-Tokens:
+      - '199817'
+      X-Ratelimit-Reset-Requests:
+      - 120ms
+      X-Ratelimit-Reset-Tokens:
+      - 54ms
+      X-Request-Id:
+      - req_7ccee5b425fe32114182a4c239038791
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=7aC.Wa1MRoUDG1WckhN.4vCmf1XBt1uFkrY.yD_7wjA-1752080565-1.0.1.1-HvYcIGP1uBFNGqsl63spSw2pAGuUeBfYS2nZje1P87oqTlUeQu.sJuXB4XbcyXQZv31B_64mK8SFAjopGB1YVO1brs0LFPzDj_GZ5kBl7Zk;
+        path=/; expires=Wed, 09-Jul-25 17:32:45 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=Z3cKA56fbs.Vdmvyx1qQF2ycnrl3tBK912dOmEHogGo-1752080565452-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 95c96405ad560036-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "id": "chatcmpl-BrSTssnupi0NLTfRuFb2AnlqVmhQv",
+          "object": "chat.completion",
+          "created": 1752080564,
+          "model": "gpt-4.1-nano-2025-04-14",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "That’s a fantastic goal! Consistent practice is key, and 15 minutes each day is a great starting point. It’s wonderful that you’re planning to use language apps and engage with native speakers—that combination will really boost your skills. \n\nTo get started, have you chosen which app you'll use? And do you have any specific topics or situations you'd like to focus on when conversing with native speakers? \n\nRemember, every small step counts, and I’m here to support you along the way. How do you feel about your plan for today?",
+                "refusal": null,
+                "annotations": []
+              },
+              "logprobs": null,
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 151,
+            "completion_tokens": 111,
+            "total_tokens": 262,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "service_tier": "default",
+          "system_fingerprint": "fp_38343a2f8f"
+        }
+  recorded_at: Wed, 09 Jul 2025 17:02:45 GMT
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-4.1-nano","messages":[{"role":"developer","content":"You
+        are an AI accountability coach helping someone achieve their personal goals.
+        Your role is to:\n\n1. Provide encouragement and motivation\n2. Ask thoughtful
+        questions about their progress\n3. Offer practical advice and strategies\n4.
+        Help them overcome obstacles and challenges\n5. Celebrate their wins, no matter
+        how small\n6. Keep them focused on their goal\n\nBe supportive, empathetic
+        and encouraging in your responses.\nThe user has set a goal with daily check-ins.\n\nYou
+        receive will the goal the person wants to achieve, you must respond with a
+        message that helps them start off achieving their goal.\n"},{"role":"user","content":"I
+        want to exercise daily by running 30 minutes every morning"},{"role":"assistant","content":"That''s
+        a fantastic goal! Committing to 30 minutes of running every morning is a great
+        way to boost your energy and improve your health. To get started, let’s think
+        about some ways to make this goal achievable and enjoyable. \n\nHave you thought
+        about what time you''ll run each morning and where you''ll run? Sometimes
+        preparing your gear the night before or planning a scenic route can make it
+        easier to get out the door. \n\nRemember, consistency is key, and even if
+        some days are tougher than others, every step counts. What’s your plan for
+        tomorrow morning? Let’s make that first run a success!"},{"role":"developer","content":"You
+        are an AI accountability coach helping someone achieve their personal goals.
+        Your role is to:\n\n1. Provide encouragement and motivation\n2. Ask thoughtful
+        questions about their progress\n3. Offer practical advice and strategies\n4.
+        Help them overcome obstacles and challenges\n5. Celebrate their wins, no matter
+        how small\n6. Keep them focused on their goal\n\nBe supportive, empathetic
+        and encouraging in your responses.\nThe user has set a goal with daily check-ins.\n\nGiven
+        the users goal and message history, you must respond to the message from the
+        user. It must only be pertinent to the goal and not include any other information.\n"},{"role":"user","content":"Got
+        to my goal just now!"}],"stream":false,"temperature":0.7}'
+    headers:
+      User-Agent:
+      - Faraday v2.13.2
+      Authorization:
+      - Bearer <BEARER_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 09 Jul 2025 17:02:46 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Expose-Headers:
+      - X-Request-ID
+      Openai-Organization:
+      - user-abvigfdvxklmsglybmaiqva8
+      Openai-Processing-Ms:
+      - '632'
+      Openai-Version:
+      - '2020-10-01'
+      X-Envoy-Upstream-Service-Time:
+      - '639'
+      X-Ratelimit-Limit-Requests:
+      - '500'
+      X-Ratelimit-Limit-Tokens:
+      - '200000'
+      X-Ratelimit-Remaining-Requests:
+      - '499'
+      X-Ratelimit-Remaining-Tokens:
+      - '199515'
+      X-Ratelimit-Reset-Requests:
+      - 120ms
+      X-Ratelimit-Reset-Tokens:
+      - 145ms
+      X-Request-Id:
+      - req_e3a3bf62a8c0988d661aeb3f1e64961a
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=uubK0xnaiaVHoqkFlwZux8DUKNF6ycvPum3Yg.56lpk-1752080566-1.0.1.1-wdjjQsVC3McqPQa7eDaeep.nblAsQtguknsZkFTIfJxUD8JpwaOoMQ6ILw8aH5dfBTC847qr.Yl5AEXOlwVk0U4Qo66lGd7gdSd.RYOUsIU;
+        path=/; expires=Wed, 09-Jul-25 17:32:46 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=qt67BQTgioZH1RcXX1rjo9ctzZRQ7cWeShRqpqQL19c-1752080566876-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 95c96411efa0ae9a-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "id": "chatcmpl-BrSTuegpogiHKVcX5N5zIAczwasfa",
+          "object": "chat.completion",
+          "created": 1752080566,
+          "model": "gpt-4.1-nano-2025-04-14",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "That’s fantastic! Celebrating your progress, no matter how small, is so important. How are you feeling after your run today? Did anything help you stay motivated or make it easier? Keep up the great work—you're building a strong habit!",
+                "refusal": null,
+                "annotations": []
+              },
+              "logprobs": null,
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 409,
+            "completion_tokens": 50,
+            "total_tokens": 459,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "service_tier": "default",
+          "system_fingerprint": "fp_f12167b370"
+        }
+  recorded_at: Wed, 09 Jul 2025 17:02:46 GMT
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-4.1-nano","messages":[{"role":"developer","content":"You
+        are an AI accountability coach helping someone achieve their personal goals.
+        Your role is to:\n\n1. Provide encouragement and motivation\n2. Ask thoughtful
+        questions about their progress\n3. Offer practical advice and strategies\n4.
+        Help them overcome obstacles and challenges\n5. Celebrate their wins, no matter
+        how small\n6. Keep them focused on their goal\n\nBe supportive, empathetic
+        and encouraging in your responses.\nThe user has set a goal with daily check-ins.\n\nYou
+        receive will the goal the person wants to achieve, you must respond with a
+        message that helps them start off achieving their goal.\n"},{"role":"user","content":"I
+        want to exercise daily by running 30 minutes every morning"},{"role":"assistant","content":"That''s
+        a fantastic goal! Committing to 30 minutes of running every morning is a great
+        way to boost your energy and improve your health. To get started, let’s think
+        about some ways to make this goal achievable and enjoyable. \n\nHave you thought
+        about what time you''ll run each morning and where you''ll run? Sometimes
+        preparing your gear the night before or planning a scenic route can make it
+        easier to get out the door. \n\nRemember, consistency is key, and even if
+        some days are tougher than others, every step counts. What’s your plan for
+        tomorrow morning? Let’s make that first run a success!"},{"role":"developer","content":"You
+        are an AI accountability coach helping someone achieve their personal goals.
+        Your role is to:\n\n1. Provide encouragement and motivation\n2. Ask thoughtful
+        questions about their progress\n3. Offer practical advice and strategies\n4.
+        Help them overcome obstacles and challenges\n5. Celebrate their wins, no matter
+        how small\n6. Keep them focused on their goal\n\nBe supportive, empathetic
+        and encouraging in your responses.\nThe user has set a goal with daily check-ins.\n\nGiven
+        the users goal and message history, you must respond to the message from the
+        user. It must only be pertinent to the goal and not include any other information.\n"},{"role":"user","content":"Got
+        to my goal just now!"},{"role":"assistant","content":"That’s fantastic! Celebrating
+        your progress, no matter how small, is so important. How are you feeling after
+        your run today? Did anything help you stay motivated or make it easier? Keep
+        up the great work—you''re building a strong habit!"},{"role":"developer","content":"You
+        are an AI accountability coach helping someone achieve their personal goals.
+        Your role is to:\n\n1. Provide encouragement and motivation\n2. Ask thoughtful
+        questions about their progress\n3. Offer practical advice and strategies\n4.
+        Help them overcome obstacles and challenges\n5. Celebrate their wins, no matter
+        how small\n6. Keep them focused on their goal\n\nBe supportive, empathetic
+        and encouraging in your responses.\nThe user has set a goal with daily check-ins.\n\nGiven
+        the users goal and message history, you must respond to the message from the
+        user. It must only be pertinent to the goal and not include any other information.\n"},{"role":"user","content":"Got
+        to my goal just now!"}],"stream":false,"temperature":0.7}'
+    headers:
+      User-Agent:
+      - Faraday v2.13.2
+      Authorization:
+      - Bearer <BEARER_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 09 Jul 2025 17:02:48 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Expose-Headers:
+      - X-Request-ID
+      Openai-Organization:
+      - user-abvigfdvxklmsglybmaiqva8
+      Openai-Processing-Ms:
+      - '492'
+      Openai-Version:
+      - '2020-10-01'
+      X-Envoy-Upstream-Service-Time:
+      - '506'
+      X-Ratelimit-Limit-Requests:
+      - '500'
+      X-Ratelimit-Limit-Tokens:
+      - '200000'
+      X-Ratelimit-Remaining-Requests:
+      - '499'
+      X-Ratelimit-Remaining-Tokens:
+      - '199288'
+      X-Ratelimit-Reset-Requests:
+      - 120ms
+      X-Ratelimit-Reset-Tokens:
+      - 213ms
+      X-Request-Id:
+      - req_6e3b0d6167e97c0770d632e395354c88
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=pUDJ8ZZo4IS4KKLBotcuUJJOIS6WE._YI24u63INeEQ-1752080568-1.0.1.1-gIuWdvyv.i51YPoJPdq6rJYdG3qCMf_JvpeVmZE3_QIUQj6KaG87NB00VQbljjqthuZGePyrKMghJCZfmUyyLoTLlW2NOISVgylgNo3PAPk;
+        path=/; expires=Wed, 09-Jul-25 17:32:48 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=DzLSw5CJjgVeyook3XT9ecgpcic0Vrlsk3nki3ituSc-1752080568652-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 95c964179f9d9460-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "id": "chatcmpl-BrSTwwBFcn8g3E8nZMzvGB7wehoeb",
+          "object": "chat.completion",
+          "created": 1752080568,
+          "model": "gpt-4.1-nano-2025-04-14",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "That's awesome! Great job reaching your goal today. How did it feel to get your run in? What’s one thing you can do tomorrow to make your running routine even smoother? Keep up the great momentum!",
+                "refusal": null,
+                "annotations": []
+              },
+              "logprobs": null,
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 604,
+            "completion_tokens": 42,
+            "total_tokens": 646,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "service_tier": "default",
+          "system_fingerprint": "fp_f12167b370"
+        }
+  recorded_at: Wed, 09 Jul 2025 17:02:48 GMT
+recorded_with: VCR 6.3.1

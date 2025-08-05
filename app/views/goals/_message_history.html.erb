@@ -1,0 +1,20 @@
+<%= turbo_stream_from([@goal, :message_history]) %>
+
+<details class="message-history">
+
+  <summary class="message-summary">
+    Message History (<%= goal.goal_messages_for_history.count %>)
+  </summary>
+
+  <div class="messages-container">
+    <% if goal.goal_messages_for_history.none? %>
+      No messages yet.
+    <% else %>
+      <%= turbo_frame_tag(@goal, :message_history_items) do %>
+        <% goal.goal_messages_for_history.each do |message| %>
+          <%= render("goals/message_history_item", message:) %>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+</details>

@@ -1,0 +1,45 @@
+/* Privacy Policy Page */
+.privacy-policy-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.privacy-policy-page .container {
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.privacy-policy-page h1 {
+  color: #1f2937;
+  margin-bottom: 24px;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.privacy-policy-page h2 {
+  color: #374151;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.privacy-policy-page p {
+  margin-bottom: 16px;
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+.privacy-policy-page ul {
+  margin-bottom: 16px;
+  padding-left: 24px;
+}
+
+.privacy-policy-page li {
+  margin-bottom: 8px;
+  color: #4b5563;
+  line-height: 1.7;
+}

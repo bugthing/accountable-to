@@ -10,7 +10,7 @@ class HomeController < ApplicationController
       # User already exists, show magic link option
       @existing_user = existing_user
       @user = User.new(user_params) # Keep form filled
-      render :index, status: :unprocessable_entity
+      render :index, status: :unprocessable_content
     else
       # New user signup flow
       @user = User.new(user_params)
@@ -19,7 +19,7 @@ class HomeController < ApplicationController
         UserMailer.confirmation_email(@user).deliver_later
         redirect_to root_path, notice: "Thank you! Please check your email to confirm your account."
       else
-        render :index, status: :unprocessable_entity
+        render :index, status: :unprocessable_content
       end
     end
   end

@@ -51,7 +51,7 @@ jobs:
           bundler-cache: true
 
       - name: Lint code for consistent style
-        run: bin/rubocop -f github
+        run: bin/standardrb -f github
 
   test:
     runs-on: ubuntu-latest
@@ -78,6 +78,7 @@ jobs:
       - name: Run tests
         env:
           RAILS_ENV: test
+          HEADLESS: yes
           # REDIS_URL: redis://localhost:6379/0
         run: bin/rails db:test:prepare test test:system
 

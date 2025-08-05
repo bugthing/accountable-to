@@ -66,7 +66,7 @@ class GoalsControllerTest < ActionDispatch::IntegrationTest
       post goals_path, params: {goal: {description: "short", frequency: "daily"}}
     end
 
-    assert_response :unprocessable_entity
+    assert_response :unprocessable_content
     assert_includes @response.body, "is too short"
   end
 

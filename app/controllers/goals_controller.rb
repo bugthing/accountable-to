@@ -23,7 +23,7 @@ class GoalsController < ApplicationController
     if @goal.save
       redirect_to dashboard_path, notice: "Great! Your goal has been set up. We'll check in with you #{@goal.frequency}."
     else
-      render :new, status: :unprocessable_entity
+      render :new, status: :unprocessable_content
     end
   end
 

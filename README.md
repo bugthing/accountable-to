@@ -13,7 +13,7 @@ A sophisticated **Ruby on Rails 8** application that combines modern web develop
 
 ## 🌟 **Why This Project Stands Out**
 
-> **Portfolio Showcase**: This demonstrates using an array of Rails features with best practices to create a neat till application.
+> **Portfolio Showcase**: This demonstrates using an array of Rails features with best practices to create a neat little application.
 
 ### 🚀 **Modern Rails Architecture**
 - **[Rails 8.0](app/controllers/)** with latest conventions and solid stack

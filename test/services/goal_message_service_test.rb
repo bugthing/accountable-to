@@ -2,6 +2,7 @@ require "test_helper"
 
 class GoalMessageServiceTest < ActiveSupport::TestCase
   include ActiveJob::TestHelper
+
   def setup
     @user = User.create!(
       email: "test@example.com"
